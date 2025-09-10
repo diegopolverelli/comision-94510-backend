@@ -1,0 +1,19 @@
+{
+  "name": "clase",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "recursos.js",
+  "scripts": {
+    "start": "node --env-file ./.env ./src/04-dotenv.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^14.0.0",
+    "dotenv": "^17.2.2",
+    "express": "^4.18.2"
+  }
+}
