@@ -1,0 +1,11 @@
+{
+  "name": "02-yarnNew",
+  "scripts": {
+    "start": "node ./src/app.js"
+  },
+  "packageManager": "yarn@4.10.3",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express": "^5.1.0"
+  }
+}
