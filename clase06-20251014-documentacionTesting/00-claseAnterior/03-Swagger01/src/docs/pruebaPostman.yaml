@@ -1,0 +1,189 @@
+openapi: 3.0.0
+info:
+  title: ABM USUARIOS Clase Swagger
+  version: 1.0.0
+  description: ''
+servers:
+  - url: localhost
+paths:
+  /api/users:
+    post:
+      summary: Registro de usuarios
+      tags: []
+      responses:
+        '201':
+          description: Respuesta Registro de usuarios
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: integer
+            ETag:
+              schema:
+                type: string
+            Date:
+              schema:
+                type: string
+            Connection:
+              schema:
+                type: string
+            Keep-Alive:
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  usuario:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                      first_name:
+                        type: string
+                      last_name:
+                        type: string
+                      email:
+                        type: string
+                        format: email
+                      password:
+                        type: string
+                        format: color
+        '400':
+          description: Respuesta Registro de usuarios - faltan datos
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: integer
+            ETag:
+              schema:
+                type: string
+            Date:
+              schema:
+                type: string
+            Connection:
+              schema:
+                type: string
+            Keep-Alive:
+              schema:
+                type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                last_name:
+                  type: string
+                email:
+                  type: string
+                  format: email
+                password:
+                  type: string
+                  format: color
+    get:
+      summary: Listado Usuarios
+      tags: []
+      responses:
+        '200':
+          description: Respuesta Listado Usuarios
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: integer
+            ETag:
+              schema:
+                type: string
+            Date:
+              schema:
+                type: string
+            Connection:
+              schema:
+                type: string
+            Keep-Alive:
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  usuarios:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        first_name:
+                          type: string
+                        last_name:
+                          type: string
+                        email:
+                          type: string
+                          format: email
+                        password:
+                          type: string
+  /api/users/60acc54545c8e82e0475100a:
+    get:
+      summary: Lista un Usuario, por id
+      tags: []
+      responses:
+        '200':
+          description: Respuesta Lista un Usuario, por id
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+            Content-Length:
+              schema:
+                type: integer
+            ETag:
+              schema:
+                type: string
+            Date:
+              schema:
+                type: string
+            Connection:
+              schema:
+                type: string
+            Keep-Alive:
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    format: style
+                  usuario:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                      first_name:
+                        type: string
+                      last_name:
+                        type: string
+                      email:
+                        type: string
+                        format: email
+                      password:
+                        type: string
